@@ -97,9 +97,9 @@ class FrequencyHopperSrc(gr.hier_block2):
         )
         n_samples_total = n_bursts * burst_length
         self.hop_sequence = numpy.arange(base_freq, base_freq + n_channels * freq_delta, freq_delta)
-        self.hop_sequence = 2410000000, 2415000000, 2425000000, 2430000000, 2435000000, 2440000000, 2455000000 
-    #    numpy.random.shuffle(self.hop_sequence)  #this randomly shuffels frequencies in the specified range
-     #   self.hop_sequence = [self.hop_sequence[x % n_channels] for x in xrange(n_bursts)]
+        #   self.hop_sequence = 2410000000, 2415000000, 2425000000, 2430000000, 2435000000, 2440000000, 2455000000 
+        #   numpy.random.shuffle(self.hop_sequence)  #this randomly shuffels frequencies in the specified range
+        #   self.hop_sequence = [self.hop_sequence[x % n_channels] for x in xrange(n_bursts)]
         self.hop_sequence = [self.hop_sequence[x % 7]for x in xrange(n_bursts)]
         if verbose:
             print "Hop Frequencies  | Hop Pattern"
@@ -111,8 +111,7 @@ class FrequencyHopperSrc(gr.hier_block2):
                 else:
                     print "\n"
             print "=================|================================"
-        # There's no real point in setting the gain via tag for this application,
-        # but this is an example to show you how to do it.
+
         gain_tag = gr.tag_t()
         gain_tag.offset = 0
         gain_tag.key = pmt.string_to_symbol('tx_command')

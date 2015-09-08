@@ -69,7 +69,7 @@
     <key>variable</key>
     <param>
       <key>id</key>
-      <value>rrc_taps</value>
+      <value>excess_bw</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -77,7 +77,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>firdes.root_raised_cosine(1, sps, 1, excess_bw, 45)</value>
+      <value>0.10</value>
     </param>
     <param>
       <key>alias</key>
@@ -85,61 +85,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(216, 179)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>sps</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>2</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(992, 179)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>arity</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>4</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(912, 179)</value>
+      <value>(968, 243)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -177,7 +123,7 @@
     <key>variable</key>
     <param>
       <key>id</key>
-      <value>excess_bw</value>
+      <value>arity</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -185,7 +131,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>0.10</value>
+      <value>4</value>
     </param>
     <param>
       <key>alias</key>
@@ -193,7 +139,61 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(968, 243)</value>
+      <value>(912, 179)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>id</key>
+      <value>sps</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(992, 179)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>id</key>
+      <value>rrc_taps</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>firdes.root_raised_cosine(1, sps, 1, excess_bw, 45)</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(216, 179)</value>
     </param>
     <param>
       <key>_rotation</key>

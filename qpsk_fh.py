@@ -78,7 +78,6 @@ def setup_parser():
             help="Print more information.")
     return parser
 
-
 class FrequencyHopperSrc(gr.hier_block2):
     """ Provides tags for frequency hopping """
     def __init__(
@@ -96,11 +95,11 @@ class FrequencyHopperSrc(gr.hier_block2):
             gr.io_signature(1, 1, gr.sizeof_gr_complex),
         )
         n_samples_total = n_bursts * burst_length
-      #   self.hop_sequence = numpy.arange(base_freq, base_freq + n_channels * freq_delta, freq_delta)
-        self.hop_sequence = 2440000000, 2450000000, 2435000000, 2430000000, 2445000000, 2420000000, 2425000000    #Specify the hopping pattern here, repeat from begining
-      #  numpy.random.shuffle(self.hop_sequence)  #this randomly shuffels frequencies in the specified range
-      #  self.hop_sequence = [self.hop_sequence[x % n_channels] for x in xrange(n_bursts)]
-        self.hop_sequence = [self.hop_sequence[x % 7]for x in xrange(n_bursts)]
+        self.hop_sequence = numpy.arange(base_freq, base_freq + n_channels * freq_delta, freq_delta)
+      # self.hop_sequence = 2440000000, 2450000000, 2435000000, 2430000000, 2445000000, 2420000000, 2425000000  #Specify the hopping pattern here, repeat from begining
+        numpy.random.shuffle(self.hop_sequence)  #this randomly shuffels frequencies in the specified range
+        self.hop_sequence = [self.hop_sequence[x % n_channels] for x in xrange(n_bursts)]
+      # self.hop_sequence = [self.hop_sequence[x % 7]for x in xrange(n_bursts)]
         if verbose:
             print "Hop Frequencies  | Hop Pattern"
             print "=================|================================"
@@ -249,7 +248,9 @@ def main():
     top_block.u.set_time_now(uhd.time_spec(0.0))
     top_block.run()
 
+
 if __name__ == '__main__':
+
     try:
         main()
     except KeyboardInterrupt:
