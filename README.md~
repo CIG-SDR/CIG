@@ -1,6 +1,6 @@
 SDR Platform for Controllable Interference Generation
 
-Required Libraries
+Required Libraries:
 
 *gr-spread: https://bitbucket.org/daulpavid/gr-spread
 *gr-cdma: https://github.com/anastas/gr-cdma
