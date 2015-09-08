@@ -19,5 +19,12 @@ https://gnuradio.org/redmine/projects/gnuradio/wiki/InstallingGR
 
 The dependencies and installation intructions are provided in the above links. 
 
-
+## Hardware
+* CIG is based and tested on USRP N210 with SBX Daughterboard. 
+* Raspberry Pi Model B+
+* WiFi Dongle: http://www.adafruit.com/product/1030
+* XBee Module: http://www.adafruit.com/products/964
+* XBee expansion board: http://www.adafruit.com/products/247
+* Bluetooth Dongle: https://www.digitec.ch/en/s1/product/asus-usb-bt400-usb-20-network-adapters-630793?tagIds=7
+* BLE Dongle: https://www.bluegiga.com/en-US/products/bled112-bluetooth-smart-dongle/  
 
