@@ -1,6 +1,6 @@
-SDR Platform for Controllable Interference Generation
+# SDR Platform for Controllable Interference Generation
 
-Required Libraries:
+## Required Libraries:
 
 1. gr-spread: https://bitbucket.org/daulpavid/gr-spread
 
@@ -12,3 +12,7 @@ Required Libraries:
 
 The dependencies and installation intructions are provided in the above links. 
 
+## GNU Radio v3.7
+You need at least version 3.7.3.
+Refer this link to install GNU Radio 
+https://gnuradio.org/redmine/projects/gnuradio/wiki/InstallingGR
