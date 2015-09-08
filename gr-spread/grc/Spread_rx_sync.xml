@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<block>
+  <name>Framer synchronizer</name>
+  <key>Spread_rx_sync</key>
+  <category>Spread</category>
+  <import>import Spread</import>
+  <make>Spread.rx_sync($threshold)</make>
+
+  <param>
+    <name>Correlation threshold</name>
+    <key>threshold</key>
+    <type>float</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>message</type>
+  </source>
+</block>

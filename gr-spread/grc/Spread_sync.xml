@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<block>
+  <name>Frame Preamble</name>
+  <key>Spread_sync</key>
+  <category>Spread</category>
+  <import>import Spread</import>
+  <make>Spread.sync()</make>
+
+  <sink>
+    <name>in</name>
+    <type>message</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>

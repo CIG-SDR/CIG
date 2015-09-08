@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<block>
+  <name>Direct-sequence spreader</name>
+  <key>Spread_ds_spreader</key>
+  <category>Spread</category>
+  <import>import Spread</import>
+  <make>Spread.ds_spreader($samples_per_chip, $gen, $init)</make>
+
+  <param>
+    <name>Samples per chip</name>
+    <key>samples_per_chip</key>
+    <value>2</value> 
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Generator</name>
+    <key>gen</key>
+    <value>1, 1, 0, 1</value>
+    <type>int_vector</type>
+  </param>
+
+  <param>
+    <name>Initial register values</name>
+    <key>init</key>
+    <value>1, 1, 1</value>
+    <type>int_vector</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>

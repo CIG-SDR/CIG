@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<block>
+  <name>TX synthesizer</name>
+  <key>Spread_synthesizer</key>
+  <category>Spread</category>
+  <import>import Spread</import>
+  <make>Spread.synthesizer($samples_per_hop, $delay, $sample_rate, $gen, $init)</make>
+
+  <param>
+    <name>Samples per hop</name>
+    <key>samples_per_hop</key>
+    <value>200</value>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Delay</name>
+    <key>delay</key>
+    <value>0</value>
+    <type>int</type>
+  </param>
+
+  <param> 
+    <name>Sample rate</name>
+    <key>sample_rate</key>
+    <type>float</type>
+  </param>
+
+  <param> 
+    <name>Generator polynomial</name>
+    <key>gen</key>
+    <value>1, 1, 0, 1</value>
+    <type>int_vector</type>
+  </param>
+
+  <param> 
+    <name>Initial register values</name>
+    <key>init</key>
+    <value>1, 1, 1</value>
+    <type>int_vector</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>

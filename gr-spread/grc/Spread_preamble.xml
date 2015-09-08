@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<block>
+  <name>Chip Preamble</name>
+  <key>Spread_preamble</key>
+  <category>Spread</category>
+  <import>import Spread</import>
+  <make>Spread.preamble_$(type.fcn)($samples_between, $pattern)</make>
+
+  <param>
+      <name>Type</name>
+      <key>type</key>
+      <type>enum</type>
+      <option>
+          <name>Byte</name>
+          <key>byte</key>
+          <opt>fcn:bb</opt>
+          <opt>scale:byte</opt>
+      </option>
+      <option>
+          <name>Complex</name>
+          <key>complex</key>
+          <opt>fcn:cc</opt>
+          <opt>scale:complex</opt>
+      </option>
+  </param>
+
+  <param>
+    <name>Samples after preamble</name>
+    <key>samples_between</key>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Pattern</name>
+    <key>pattern</key>
+    <type>int_vector</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>$type</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>$type</type>
+  </source>
+</block>

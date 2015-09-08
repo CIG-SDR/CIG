@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<block>
+  <name>CPFSK modulator</name>
+  <key>Spread_cpfsk_mod</key>
+  <category>Spread</category>
+  <import>import Spread</import>
+  <make>Spread.cpfsk_mod($samp_sym)</make>
+
+  <param>
+    <name>Samples per symbol</name>
+    <key>samp_sym</key>
+    <type>int</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>

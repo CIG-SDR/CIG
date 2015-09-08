@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<block>
+  <name>Direct-sequence despreader</name>
+  <key>Spread_ds_despreader</key>
+  <category>Spread</category>
+  <import>import Spread</import>
+  <make>Spread.ds_despreader($samples_per_chip, 
+                             $samples_between, 
+                             $threshold, 
+                             $gen, 
+                             $init)</make>
+
+  <param>
+    <name>Samples per chip</name>
+    <key>samples_per_chip</key>
+    <value>2</value> 
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Samples after preamble</name>
+    <key>samples_between</key>
+    <value>1024</value> 
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Threshold</name>
+    <key>threshold</key>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>Generator</name>
+    <key>gen</key>
+    <value>1, 1, 0, 1</value>
+    <type>int_vector</type>
+  </param>
+
+  <param>
+    <name>Initial register values</name>
+    <key>init</key>
+    <value>1, 1, 1</value>
+    <type>int_vector</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>

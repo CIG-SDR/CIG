@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<block>
+  <name>Finite-message source</name>
+  <key>Spread_msg_source</key>
+  <category>Spread</category>
+  <import>import Spread</import>
+  <make>Spread.msg_source($num_messages, $len)</make>
+
+  <param>
+    <name>Number of messages</name>
+    <key>num_messages</key>
+    <value>100</value> 
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Bit length</name>
+    <key>len</key>
+    <value>100</value> 
+    <type>int</type>
+  </param>
+
+  <source>
+    <name>out</name>
+    <type>message</type>
+  </source>
+</block>
