@@ -29,10 +29,32 @@ The dependencies and installation intructions are provided in the above links.
 * BLE Dongle: https://www.bluegiga.com/en-US/products/bled112-bluetooth-smart-dongle/
 
 
+## Tools Required
+
+* iPerf: https://iperf.fr/
+* l2ping: http://linuxcommand.org/man_pages/l2ping1.html
+* Raspbian OS: https://www.raspbian.org/
+
 ### GRC Files
 
 Contains the grc files which are used as a base for constructing the flowgraphs. The generated python files
 from the flowgraphs are further edited to configure them according to device specifications. 
 
-   
+### Record Interference
+
+Contains flow graphs and scripts to record and packpay the behavior of the devices used which are specified above. 
+The RX and TX Gain, Bandwidth and the Sampling rate is configured according to the device specifications. The distance
+between the device and USRP is 2mts. 
+
+### examples
+
+Contains the scripts to generate and control the interference of prevalent wireless devices operating in the 2.4GHz ISM band
+
+Run the ./cigusrp.sh to know the devices present and configuartion of the CIG. 
+
+### Raspberry Pi Config
+
+Contains the scripts to configure Raspberry Pi as a traffic generator of ZigBee, WiFi, Bluetooth and BLE.  
+
+Run ./cig-rpi to configure the Raspberry Pi as a traffic generator
 
